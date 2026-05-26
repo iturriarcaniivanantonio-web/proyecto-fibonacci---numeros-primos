@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío Avanzado: Fibonacci y Primos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <span class="badge-top">PROYECTO ACADÉMICO</span>
+            <h1>Fibonacci y Números Primos</h1>
+            <p class="subtitle">Aplicación automatizada para la validación y optimización algorítmica</p>
+            <div class="meta-author">
+                <p><strong>Estudiante:</strong> Iván Iturri</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="card planning-card">
+            <h3>1. Planificación Inicial (Sección 13 del PDF)</h3>
+            <div class="qa-grid">
+                <div class="qa-item">
+                    <strong>¿Qué problema real voy a resolver?</strong>
+                    <p>El filtrado y análisis automático de flujos numéricos para optimizar sistemas criptográficos de seguridad.</p>
+                </div>
+                <div class="qa-item">
+                    <strong>¿Usará Fibonacci, primos o ambos?</strong>
+                    <p>Ambos conceptos matemáticos de manera combinada e interdependiente.</p>
+                </div>
+                <div class="qa-item">
+                    <strong>¿Qué datos ingresará el usuario?</strong>
+                    <p>Un número entero positivo ($n$) que define el límite de términos a evaluar en la secuencia.</p>
+                </div>
+                <div class="qa-item">
+                    <strong>¿Qué resultado debe mostrar la página?</strong>
+                    <p>La serie ordenada en pantalla indicando explícitamente qué valores poseen la propiedad de ser primos.</p>
+                </div>
+                <div class="qa-item">
+                    <strong>¿Cómo explicaré el algoritmo de forma sencilla?</strong>
+                    <p>El sistema calcula el término de Fibonacci y, mediante un bucle secundario, verifica si tiene divisores exactos antes de continuar.</p>
+                </div>
+                <div class="qa-item">
+                    <strong>¿Cómo se adaptará a celulares y PC?</strong>
+                    <p>Diseño fluido mediante CSS Grid, Flexbox y Media Queries responsivos.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="two-columns">
+            <section class="card">
+                <h3>2. Contexto del Problema</h3>
+                <p>El desarrollo consiste en una herramienta interactiva que calcula la sucesión de Fibonacci y discrimina en tiempo real cuáles términos pertenecen al conjunto de los números primos. Esta combinación es vital en la informática moderna para el diseño de claves y seguridad criptográfica.</p>
+            </section>
+
+            <section class="card">
+                <h3>3. Explicación del Algoritmo</h3>
+                <p>Para cumplir con las restricciones de la rúbrica, el código opera de manera puramente iterativa usando variables algebraicas primitivas ($a$, $b$, $c$). <strong>No se utilizan arreglos (arrays) ni vectores</strong>, garantizando un consumo mínimo de memoria.</p>
+            </section>
+        </div>
+
+        <section class="card interactive-card">
+            <div class="card-header-accent">
+                <h3>4. Panel de Control Interactiva</h3>
+                <p>Introduzca el número de términos y ejecute el análisis algorítmico matemático.</p>
+            </div>
+            
+            <form id="formulario-fibonacci" onsubmit="event.preventDefault(); ejecutarAlgoritmo();">
+                <div class="form-group">
+                    <label for="cantidad-terminos">Cantidad de términos a generar ($n$):</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="cantidad-terminos" min="1" max="50" placeholder="Ej. 12" required>
+                    </div>
+                </div>
+                <button type="submit" id="btn-ejecutar">Calcular y Verificar Secuencia</button>
+            </form>
+        </section>
+
+        <section class="card result-card">
+            <h3>5. Monitor de Resultados en Tiempo Real</h3>
+            <p style="color: #64748b; font-size: 14px; margin-bottom: 10px;">Resultados calculados dinámicamente mediante manipulación del DOM (<code>.innerHTML</code>):</p>
+            <div id="resultado-contenedor" class="results-grid">
+                <div class="placeholder-text">
+                    <p>Esperando parámetros de entrada... Ingrese un valor arriba para iniciar el procesamiento.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h3>6. Conclusión</h3>
+            <p>La optimización de código mediante la teoría de números demuestra que la matemática pura ofrece soluciones de ingeniería eficientes. Evitar el almacenamiento dinámico innecesario reduce el impacto en el procesador y permite un entorno de ejecución ágil tanto en ordenadores como en dispositivos móviles.</p>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Iván Iturri | Departamento de Matemáticas y Programación</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
